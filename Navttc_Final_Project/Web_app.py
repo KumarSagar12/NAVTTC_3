@@ -239,15 +239,15 @@ def Model_Building():
                 elif classifier_name=="Desicion Tree":
                     clf=DecisionTreeClassifier(criterion=params['criterion'],max_depth=params['max_depth'])
                 return clf
-        clf=get_classifier(classifier_name,params)
-        clf.fit(X_train,y_train)
-        y_pred=clf.predict(X_test)
-        st.write("The accuracy of the model is",accuracy_score(y_test,y_pred))
-        st.write("The confusion matrix of the model is")
-        st.table(confusion_matrix(y_test,y_pred))
+            clf=get_classifier(classifier_name,params)
+            clf.fit(X_train,y_train)
+            y_pred=clf.predict(X_test)
+            st.write("The accuracy of the model is",accuracy_score(y_test,y_pred))
+            st.write("The confusion matrix of the model is")
+            st.table(confusion_matrix(y_test,y_pred))
 
 
-st.write(Content(options))
+Content(options)
 
 
 
